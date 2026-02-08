@@ -4,6 +4,12 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+    # Настройки HikariCP (Extra Task 1)
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      pool-name: MyHikariPool
 
   h2:
     console:
@@ -15,4 +21,5 @@ spring:
       mode: always
 
   profiles:
-    active: jdbctemplate
+
+    active: jdbcclient
